@@ -1,5 +1,5 @@
 ### Simple Shell
-    1.	Designers and Implementers of Unix Operating System
+1.	Designers and Implementers of Unix Operating System
  Design and Implementation:
 The original Unix operating system, conceived in the late 1960s and implemented in the early 1970s, was a collaborative effort primarily led by **Ken Thompson**, **Dennis Ritchie**, and others at Bell Labs. It emerged as a response to the limitations of existing operating systems, aiming for simplicity, efficiency, and portability.
 Key Contributors:
@@ -102,6 +102,7 @@ int main () {
 13.	Suspending Process Execution
 Suspending Execution:
 The `wait` system call is employed to suspend the execution of a process until one of its child processes terminates. This is crucial for managing the synchronization of processes.
+
 Example:
 ```c
 #include <sys/types.h>
@@ -123,18 +124,14 @@ int main() {
 }
 ```
 
-
-
-
-
-
 14.	EOF (End-of-File)
 EOF Explanation:
 EOF, or "end-of-file," is a condition indicating the end of data in a file or stream. It is encountered when attempting to read beyond the last available data.
 Usage:
 In input operations, detecting EOF is crucial to determine when there is no more data to be processed.
-Example:
 
+Example:
+```c
 #include <stdio.h>
 int main () {
     // Open a file for reading
@@ -157,4 +154,4 @@ int main () {
 
     return 0;
 }       
-
+```
