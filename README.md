@@ -156,14 +156,13 @@ int main () {
 }       
 ```
 ### project files
-```
-README.md - description about the project.
-AUTHORS - file at the root of your repository, listing all individuals having contributed content to the repository.
-shell.h - is the header file which contains the standared header file and prototype of o function used in the program.
-main.c - initialize the program with infinite loop by call the prompt function
-prompt.c - it use getline system call to read the input from the user and run infinite loop with fork to keep prompt going.
-special_character - It identiies if the special inputs such as if the frist input is slash,the user typed exit or env...
-string.c -it handles the strings(string length, write string,find string in directory,concatane strings....)
-cmd.c - it finds the command the user entered.
-execute.c - execute the command.
-```
+
+ 1. README.md - description about the project.
+ 2. AUTHORS - file at the root of your repository, listing all individuals having contributed content to the repository.
+ 3. shell.h - is the header file which contains the standared header file and prototype of o function used in the program.
+ 4. main.c - initialize the program with infinite loop by call the prompt function
+ 5. prompt.c - it use getline system call to read the input from the user and run infinite loop with fork to keep prompt going.
+ 6. special_character - It identiies if the special inputs such as if the frist input is slash,the user typed exit or env...
+ 7. string.c -it handles the strings(string length, write string,find string in directory,concatane strings....)
+ 8. cmd.c - it finds the command the user entered.
+ 9. execute.c - execute the command.
