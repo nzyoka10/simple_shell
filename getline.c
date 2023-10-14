@@ -8,6 +8,7 @@
  *
  * Return: Bytes read.
  */
+
 ssize_t input_buf(info_t *info, char **buf, size_t *len)
 {
     ssize_t read_bytes = 0;
@@ -37,7 +38,6 @@ ssize_t input_buf(info_t *info, char **buf, size_t *len)
             remove_comments(*buf);
             build_history_list(info, *buf, info->histcount++);
 
-            // Check if it's a command chain
             {
                 *len = read_bytes;
                 info->cmd_buf = buf;
@@ -54,9 +54,10 @@ ssize_t input_buf(info_t *info, char **buf, size_t *len)
  *
  * Return: Bytes read.
  */
+
 ssize_t get_input(info_t *info)
 {
-    static char *buf; // Command chain buffer
+    static char *buf;
     static size_t i, j, len;
     ssize_t read_bytes = 0;
     char **buf_p = &(info->arg), *p;
@@ -105,6 +106,7 @@ ssize_t get_input(info_t *info)
  *
  * Return: Bytes read.
  */
+
 ssize_t read_buf(info_t *info, char *buf, size_t *i)
 {
     ssize_t read_bytes = 0;
@@ -128,6 +130,7 @@ ssize_t read_buf(info_t *info, char *buf, size_t *i)
  *
  * Return: Bytes read.
  */
+
 int _getline(info_t *info, char **ptr, size_t *length)
 {
     static char buf[READ_BUF_SIZE];
@@ -179,6 +182,7 @@ int _getline(info_t *info, char **ptr, size_t *length)
  *
  * Return: void
  */
+
 void sigintHandler(__attribute__((unused)) int sig_num)
 {
     _puts("\n");

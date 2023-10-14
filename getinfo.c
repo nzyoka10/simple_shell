@@ -38,8 +38,8 @@ void setInfo(info_t *info, char **av)
             ;
         info->argc = i;
 
-        replaceAlias(info);
-        replaceVars(info);
+        replace_alias(info);
+        replace_vars(info);
     }
 }
 
@@ -58,11 +58,11 @@ void freeInfo(info_t *info, int all)
         if (!info->cmd_buf)
             free(info->arg);
         if (info->env)
-            freeList(&(info->env));
+            free_list(&(info->env));
         if (info->history)
-            freeList(&(info->history));
+            free_list(&(info->history));
         if (info->alias)
-            freeList(&(info->alias));
+            free_list(&(info->alias));
         ffree(info->environ);
         info->environ = NULL;
         bfree((void **)info->cmd_buf);
